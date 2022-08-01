@@ -2,7 +2,10 @@ import Todof from './Todof.js';
 import Appf from './Appf.js';
 
 export default class UIf {
+    static selectFilterEl = document.getElementsByClassName('select_filter');
+
     static createHTML(arrHTML) {
+        //let selectFilterEl;
         const length = arrHTML.length;
         let [el, queryEl] = '';
 
@@ -16,7 +19,17 @@ export default class UIf {
                 for (const key in arrHTML[i].methodProp[0])
                     el[key] = arrHTML[i].methodProp[0][key];
 
+            // const idxNr = Todof(new Todof.todoCount());
             queryEl.append(el);
         }
+    }
+
+    static listener() {
+        this.selectFilterEl = document.getElementsByClassName('select_filter');
+        console.log('selectFilterEl UIf ================ ===', this.selectFilterEl);
+    }
+
+    static selectFilter() {
+        alert('ok111');
     }
 }
