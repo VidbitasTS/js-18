@@ -1,1 +1,32 @@
-@import 'reset.css'
+@import 'reset.css';
+.done-todo {
+    color: gray;
+    text-decoration: line-through;
+}
+
+.done-todo::after {
+    content: ' complete';
+}
+
+.list {
+    list-style: none;
+}
+
+#add-todo {
+    margin-top: 20px;
+}
+
+#add-todo:hover {
+    background-color: rgb(216, 213, 213);
+}
+
+.alert {
+    position: fixed;
+    padding: 1rem;
+    top: 15%;
+    max-width: 500px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: tomato;
+    border-radius: 10px;
+}

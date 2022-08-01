@@ -1,0 +1,138 @@
+/* Common  ============== */
+
+.section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+p {
+    line-height: 1.2;
+    color: #777;
+}
+
+
+/* Header ============== */
+
+.header {
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: inline-block;
+    padding: 1rem 0;
+}
+
+.main-nav__item {
+    display: none;
+}
+
+
+/* Phill section  ================ */
+
+.phill__subtitle {
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 12px;
+}
+
+.phill__title {
+    font-size: 1.3rem;
+    text-transform: uppercase;
+}
+
+
+/* services section  ================ */
+
+.services {
+    background-color: #fafafa;
+    text-align: center;
+}
+
+.filterCard {
+    text-align: right;
+}
+
+#btn_filter {
+    width: 200px;
+    padding: 15px;
+    border-radius: 15px;
+    border: none;
+    color: #777;
+    cursor: pointer;
+}
+
+#btn_filter:hover {
+    color: rgb(52, 38, 38);
+    background-color: #cac4c4;
+}
+
+#chk_filter {
+    margin-right: 50px;
+}
+
+
+/* #btn_filter {
+    padding-right: 20px;
+} */
+
+.services__title {
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+.s-card__icon {
+    font-size: 1.7rem;
+    margin-bottom: 0.8em;
+    margin-top: 0.8em;
+}
+
+.s-card__title {
+    font-weight: normal;
+}
+
+
+/* Responsive  */
+
+@media screen and (min-width: 600px) {
+    .main-nav__item {
+        display: inline-block;
+        padding: 0.5em 1em;
+        /* background-color: #f4f4f4; */
+    }
+    .main-nav__burger {
+        display: none;
+    }
+    .phill .container {
+        overflow: hidden;
+    }
+    .services-cards-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    .s-card {
+        flex-basis: 48%;
+        flex-grow: 1;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .phill .container {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+    .s-card {
+        flex-basis: 30%;
+    }
+}
